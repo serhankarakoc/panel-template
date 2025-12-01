@@ -95,18 +95,22 @@ body {
 
 .form-control {
     border: 2px solid #e5e7eb;
-    border-radius: 0 12px 12px 0;
+    border-radius: 8px;
     padding: 12px 16px;
     font-size: 1rem;
     transition: all 0.3s ease;
     background-color: #f8fafc;
-    border-left: none;
 }
 
 .form-control:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
     background-color: white;
+}
+
+.input-group .form-control {
+    border-radius: 0 8px 8px 0;
+    border-left: none;
 }
 
 .input-group {
@@ -117,7 +121,7 @@ body {
     background-color: #f1f5f9;
     border: 2px solid #e5e7eb;
     border-right: none;
-    border-radius: 12px 0 0 12px;
+    border-radius: 8px 0 0 8px;
     padding: 12px 16px;
     color: #64748b;
     display: flex;
@@ -453,13 +457,6 @@ body.auth-page {
     color: var(--primary-color);
 }
 
-.hamburger-btn:hover {
-    background-color: var(--primary-color);
-    color: var(--dark-color);
-    border: none;
-    box-shadow: none;
-}
-
 .hamburger-btn {
     border: none;
     box-shadow: none;
@@ -476,12 +473,32 @@ body.auth-page {
     transition: all 0.3s;
 }
 
-.hamburger-btn:focus,
+.hamburger-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    border: none;
+    box-shadow: none;
+}
+
+.hamburger-btn:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--dark-color);
+}
+
 .hamburger-btn:active {
     border: none;
     box-shadow: none;
     outline: none;
     background-color: transparent;
+    color: var(--dark-color);
+}
+
+.hamburger-btn:hover:focus,
+.hamburger-btn:hover:active {
+    background-color: var(--primary-color);
     color: var(--dark-color);
 }
 
